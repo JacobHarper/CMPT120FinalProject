@@ -15,8 +15,54 @@ function set(idvalue) {
 	if (buttonclicked.innerHTML == "" || buttonclicked.innerHTML == null) {
 		var cp = document.getElementById("currentplayer").innerHTML;
 		buttonclicked.innerHTML = cp;
-		changeplayer();
+		checkwin();
 	} else {
 		alert("You can't click this!");
 	}
 }
+
+function checkwin(){
+	var player = document.getElementById("currentplayer").innerHTML;
+	if(document.getElementById("b0").innerHTML ==  document.getElementById("b1").innerHTML && document.getElementById("b1").innerHTML ==  document.getElementById("b2").innerHTML &&document.getElementById("b1").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	// add statements to check the rest of winning combinations
+	// ...
+	else if(document.getElementById("b3").innerHTML ==  document.getElementById("b4").innerHTML && document.getElementById("b4").innerHTML ==  document.getElementById("b5").innerHTML &&document.getElementById("b4").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else if(document.getElementById("b6").innerHTML ==  document.getElementById("b7").innerHTML && document.getElementById("b7").innerHTML ==  document.getElementById("b8").innerHTML &&document.getElementById("b7").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else if(document.getElementById("b0").innerHTML ==  document.getElementById("b3").innerHTML && document.getElementById("b3").innerHTML ==  document.getElementById("b6").innerHTML &&document.getElementById("b3").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else if(document.getElementById("b1").innerHTML ==  document.getElementById("b4").innerHTML && document.getElementById("b4").innerHTML ==  document.getElementById("b7").innerHTML &&document.getElementById("b4").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else if(document.getElementById("b2").innerHTML ==  document.getElementById("b5").innerHTML && document.getElementById("b5").innerHTML ==  document.getElementById("b8").innerHTML &&document.getElementById("b5").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else if(document.getElementById("b0").innerHTML ==  document.getElementById("b4").innerHTML && document.getElementById("b4").innerHTML ==  document.getElementById("b8").innerHTML &&document.getElementById("b4").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else if(document.getElementById("b2").innerHTML ==  document.getElementById("b4").innerHTML && document.getElementById("b4").innerHTML ==  document.getElementById("b6").innerHTML &&document.getElementById("b4").innerHTML == player)
+	{ 
+    	alert("You win! The winner is "+ player); // Check if (0,1,2) has been achieved
+  	}
+	else{
+		changeplayer(); // nobody wins, change player
+}
+}
+checkwin();
+
+
+
+
